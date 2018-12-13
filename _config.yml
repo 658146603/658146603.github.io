@@ -1,5 +1,5 @@
 ﻿# Site settings
-title: "peppermint2018" #在这里写入标题
+title: "helloworld" #在这里写入标题
 header-img: "img/zhihu.jpg"
 tagline: "cn"  
 description: "描述"  #用一句话描述博客
@@ -8,8 +8,8 @@ url: "http://658146603.github.io"  #此处填写你的博客地址
 
 # About/contact
 owner: 
-  name: "ht c" # 填写作者信息：名字
-  email: t1542462994@outlook.com # 填写作者信息：邮箱
+  name: "王程飞" # 填写作者信息：名字
+  email: a1533144693@163,com # 填写作者信息：邮箱
   bio: "填写作者信息" # 填写作者信息：博客描述
 
 # Data
@@ -18,7 +18,7 @@ favicon: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 
 #douban_username:  # 你的豆瓣id
 #twitter_username: 
-github_username: h1542462994
+github_username: 658146603
 #facebook_username: 
 #weibo_username: 
 #zhihu_username: 
