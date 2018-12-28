@@ -53,31 +53,19 @@ description: "树莓派屏幕配置"
 
 引脚定义：
 
-1   ----> NC
-
-2   ----> 5v
-
-3   ----> NC
-
-4   ----> 5V
-
-19 ----> MOSI
-
-20 ----> GND
-
-21 ----> MISO
-
-22 ----> TP_IRQ
-
-23 ----> SCLK
-
-24 ----> TP_CS
-
-25 ----> GND
-
-26 ----> NC
-
-Others are NC
+    1   ----> NC
+    2   ----> 5v
+    3   ----> NC
+    4   ----> 5V
+    19 ----> MOSI
+    20 ----> GND
+    21 ----> MISO
+    22 ----> TP_IRQ
+    23 ----> SCLK
+    24 ----> TP_CS
+    25 ----> GND
+    26 ----> NC
+    Others are NC
 
 
 hdmi_mode 设置屏幕分辨率
