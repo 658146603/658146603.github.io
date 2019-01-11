@@ -1,8 +1,8 @@
 ﻿# Site settings
-title: "qscftyjm的个人空间" #在这里写入标题
+title: "qscftyjm的blog" #在这里写入标题
 header-img: "img/zhihu.jpg"
 tagline: "cn"  
-description: "描述"  #用一句话描述博客
+description: "helloworld"  #用一句话描述博客
 baseurl: ""
 url: "http://658146603.github.io"  #此处填写你的博客地址 
 
@@ -43,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "wcf" # 你的名字
+      author: "qscftyjm" # 你的名字
       header-img: "img/zhihu.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
