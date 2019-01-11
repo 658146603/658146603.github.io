@@ -1,8 +1,12 @@
 ---
 layout: page
 title: "About"
-description: "你所看见和感受到的，你所喜爱和理解的，全是你正穿越的风景。 ——里尔克"
+description: "面向 CTRL-C/V 编程"
 header-img: "img/green.jpg"
 ---
+### `qscftyjm` ZJUT
 
-这一页填写你的自我介绍。
+<br>
+### 友情链接
+`cht`->[blog](https://h1542462994.github.io/) /
+[github](https://github.com/h1542462994)
