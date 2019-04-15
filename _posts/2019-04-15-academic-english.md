@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[树莓派]树莓派屏幕配置"
+title: "[Academic English]Key Words and Info in Unit 6 Text A"
 create: 2019-04-15
 update: 2019-04-15
 categories: blog
