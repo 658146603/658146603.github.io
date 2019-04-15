@@ -9,5 +9,5 @@ header-img: "img/green.jpg"
 <br>
 ### 友情链接
 
-`cht`->[blog](https://h1542462994.github.io/) /
+`cht dalao`->[blog](https://h1542462994.github.io/) /
 [github](https://github.com/h1542462994)
