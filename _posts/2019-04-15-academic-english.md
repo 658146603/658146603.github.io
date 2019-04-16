@@ -60,7 +60,7 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |Manufacturing resource planning (MRP II)|Product data management (PDM)|
 |Product lifecycle management (PLM)|Virtual prototyping|
 
-![CaxOnCAD](../img/CaxOnCAD.png)
+![CaxOnCAD]([/img/CaxOnCAD.png](https://github.com/658146603/StudyRoute/blob/master/Academic%20English/img/CaxOnCAD.png))
 
 |Key Words | Meanings |
 |:----- | --------:|
