@@ -16,7 +16,7 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 
 # KEY WORD
 * ***applied mathematics***
-* 
+<!-- *  ***computer science*** -->
 
 
 `Philip J. Davis`
