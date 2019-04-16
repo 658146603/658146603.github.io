@@ -16,10 +16,9 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 
 # KEY WORD
 * ***applied mathematics***
-<!-- *  ***computer science*** -->
-
 
 `Philip J. Davis`
+
 |||
 |:---|:---|
 |Born|January 2, 1923  Lawrence,Massachusetts, U.S.|
@@ -30,6 +29,7 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |Lester R.|Ford Award (1982)|
 
 `Scientific career`
+
 |||
 |:---|:---|
 |Fields|Mathematics|
