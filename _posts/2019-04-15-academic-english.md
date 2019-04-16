@@ -11,7 +11,6 @@ description: "Key Words and Info in Unit 6 Text A"
 # `Philip J. Davis`
 >Philip J. Davis (January 2, 1923 – March 13, 2018) was an American academic applied mathematician. 
 Davis was born in Lawrence, Massachusetts. He was known for his work in numerical analysis and approximation theory, as well as his investigations in the history and philosophy of mathematics. He earned his degrees in mathematics from Harvard University.
->> Paul Ernest: He is best known for his work on philosophical aspects of mathematics education and his contributions to developing a social constructivist philosophy of mathematics.
 
 `Philip J. Davis`
 
@@ -63,9 +62,15 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 ![CaxOnCAD](https://github.com/658146603/StudyRoute/raw/master/Academic%20English/img/CaxOnCAD.png)
 
 |Key Words | Meanings |
-|:----- | --------:|
-|generation||
-|astrological||
-|paranoia||
-|||
-|||
+|:-----|:--------|
+|mathematization|*n*. 数学化；数学处理|
+|solid mechanics|*n*. 固体力学|
+|rheology|*n*. 流变能力；流变学|
+|algorithm|*n*. 运算法则；演算法|
+|prescription|*n*. 解决方法；诀窍|
+|linguistic|*n*. 语言的；语言学的|
+|compilation|*n*. 编纂；编写；汇编|
+|computational|*n*. 计算机的；计算的|
+|linear algebra|线性代数|
+|multi-variable calculus|多变量微积分|
+
