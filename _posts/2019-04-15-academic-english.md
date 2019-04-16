@@ -24,7 +24,7 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |**Died**|March 13, 2018 (aged 95)|
 |**Nationality**|American|
 |**Alma mater**|Harvard University|
-|**Awards**|Chauvenet Prize (1963) Lester R. Ford Award (1982)|
+|**Awards**|Chauvenet Prize (1963), Lester R. Ford Award (1982)|
 
 `Scientific career`
 
@@ -34,7 +34,6 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |**Institutions**|Brown University|
 |**Doctoral advisor**|Ralph Philip Boas, Jr.|
 |**Doctoral students**|Frank Deutsch Jeffery J. Leader|
-
 
 <br>
 
