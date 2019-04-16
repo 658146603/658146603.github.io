@@ -12,8 +12,14 @@ description: "Key Words and Info in Unit 6 Text A"
 >Philip J. Davis (January 2, 1923 – March 13, 2018) was an American academic applied mathematician. 
 Davis was born in Lawrence, Massachusetts. He was known for his work in numerical analysis and approximation theory, as well as his investigations in the history and philosophy of mathematics. He earned his degrees in mathematics from Harvard University.
 
-`Philip J. Davis`
+<br>
 
+# KEY WORD
+* ***applied mathematics***
+* 
+
+
+`Philip J. Davis`
 |||
 |:---|:---|
 |Born|January 2, 1923  Lawrence,Massachusetts, U.S.|
@@ -24,7 +30,6 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |Lester R.|Ford Award (1982)|
 
 `Scientific career`
-
 |||
 |:---|:---|
 |Fields|Mathematics|
@@ -61,7 +66,7 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 
 ![CaxOnCAD](https://github.com/658146603/StudyRoute/raw/master/Academic%20English/img/CaxOnCAD.png)
 
-|Key Words | Meanings |
+|Technical Term | Meanings |
 |:-----|:--------|
 |mathematization|*n*. 数学化；数学处理|
 |solid mechanics|*n*. 固体力学|
