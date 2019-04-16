@@ -12,10 +12,6 @@ description: "Key Words and Info in Unit 6 Text A"
 >Philip J. Davis (January 2, 1923 – March 13, 2018) was an American academic applied mathematician. 
 Davis was born in Lawrence, Massachusetts. He was known for his work in numerical analysis and approximation theory, as well as his investigations in the history and philosophy of mathematics. He earned his degrees in mathematics from Harvard University.
 
-<br>
-
-## Key Word: ***applied mathematics***
-
 `Philip J. Davis`
 
 |||
@@ -34,6 +30,10 @@ Davis was born in Lawrence, Massachusetts. He was known for his work in numerica
 |**Institutions**|Brown University|
 |**Doctoral advisor**|Ralph Philip Boas, Jr.|
 |**Doctoral students**|Frank Deutsch Jeffery J. Leader|
+
+<br>
+
+## Key Word: ***applied mathematics***
 
 <br>
 
