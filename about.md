@@ -4,7 +4,7 @@ title: "About"
 description: "面向 CTRL-C/V 编程"
 header-img: "img/green.jpg"
 ---
-### `qscftyjm` ZJUT
+### `nfcv` ZJUT
 
 <br>
 ### 友情链接
