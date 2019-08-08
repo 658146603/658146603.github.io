@@ -1,16 +1,16 @@
 ﻿# Site settings
-title: "null/void" #在这里写入标题
+title: "nfcv" #在这里写入标题
 header-img: "img/zhihu.jpg"
 tagline: "cn"  
-description: "helloworld"  #用一句话描述博客
+description: "面向CTRL-C/V编程"  #用一句话描述博客
 baseurl: ""
 url: "http://658146603.github.io"  #此处填写你的博客地址 
 
 # About/contact
 owner: 
   name: "qscftyjm" # 填写作者信息：名字
-  email: a1533144693@163.com # 填写作者信息：邮箱
-  bio: "Android" # 填写作者信息：博客描述
+  email: 1533144693@qq.com # 填写作者信息：邮箱
+  bio: "Android萌新" # 填写作者信息：博客描述
 
 # Data
 gavatar: img/favicon.png # 浏览器地址栏小图标，可自定义更改
@@ -43,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "qscftyjm" # 你的名字
+      author: "nfcv" # 你的名字
       header-img: "img/zhihu.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
