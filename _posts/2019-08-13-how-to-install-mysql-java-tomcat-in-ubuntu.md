@@ -74,7 +74,7 @@ sudo systemctl enable rc-local
 ```
 
 
-`mysql允许远程连接:`
+`mysql允许远程连接`
 ```
 mysql -uroot -p
 use mysql
