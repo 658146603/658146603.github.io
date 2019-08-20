@@ -8,26 +8,37 @@ tags: [Ubuntu]
 description: "How to Install MySQL in Ubuntu"
 ---
 
-```
-install:
 
+`prepare`
+```
 sudo apt-get update
+sudo apt-get upgrade
+```
+
+`install mysql`
+```
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
+```
 
-Other command:
-
-apt-get install default-jdk
+`install java and tomcat`
+```
+sudo apt-get install default-jdk
 tar -zxvf apache-tomcat-9.0.12.tar.gz
+```
+
+`tomcat 开机自启动`
+
+```
+rc.local for Ubuntu-18.04:
 
 
-rc.local for ubuntu-18.04:
 nano /etc/systemd/system/rc-local.service
-{
+
     [Unit]
     Description=/etc/rc.local Compatibility
     ConditionPathExists=/etc/rc.local
-    
+
     [Service]
     Type=forking
     ExecStart=/etc/rc.local start
@@ -35,14 +46,13 @@ nano /etc/systemd/system/rc-local.service
     StandardOutput=tty
     RemainAfterExit=yes
     SysVStartPriority=99
-    
+
     [Install]
     WantedBy=multi-user.target
-}
 
 
 nano /etc/rc.local
-{
+
     #!/bin/sh -e
     #
     # rc.local
@@ -55,12 +65,11 @@ nano /etc/rc.local
     # bits.
     #
     # By default this script does nothing.
-    echo "测试脚本执行成功" > /usr/local/test.log
+    /home/admin/app/apache-tomcat-9.0.12/bin/catalina.sh start
     exit 0
-}
+
 chmod 755 /etc/rc.local
 sudo systemctl enable rc-local
-
 ```
 
 
@@ -80,8 +89,8 @@ service mysql restart
 ```
 `问题`
 ```
-1. mysql 只允许root登录 
-    alter user 'root'@'localhost' identified with mysql_native_password by '$password'
+1. mysql 只允许root登录的问题
+    alter user 'root'@'localhost' identified with mysql_native_password by '$password';
 2. Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' 
     sudo mkdir -p /var/run/mysqld
     sudo chown mysql /var/run/mysqld/
