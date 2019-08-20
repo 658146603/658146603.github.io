@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How to Install MySQL in Ubuntu"
+title: "How to Install MySQL in Ubuntu 18.04"
 create: 2019-08-13
-update: 2019-08-13
+update: 2019-08-20
 categories: blog
 tags: [Ubuntu]
 description: "How to Install MySQL in Ubuntu"
