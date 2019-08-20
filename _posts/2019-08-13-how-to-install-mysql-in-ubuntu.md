@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Install MySQL in Ubuntu 18.04"
+title: "How to Install MySQL, Java, Tomcat in Ubuntu 18.04"
 create: 2019-08-13
 update: 2019-08-20
 categories: blog
@@ -27,12 +27,9 @@ sudo apt-get install default-jdk
 tar -zxvf apache-tomcat-9.0.12.tar.gz
 ```
 
-`tomcat 开机自启动`
+`tomcat 开机自启动 rc.local for Ubuntu-18.04`
 
 ```
-rc.local for Ubuntu-18.04:
-
-
 sudo nano /etc/systemd/system/rc-local.service
 
 内容：
