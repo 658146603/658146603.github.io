@@ -80,14 +80,10 @@ sudo systemctl enable rc-local
 `mysql允许远程连接:`
 ```
 mysql -uroot -p
-
-use mysql;
-
+use mysql
 grant all privileges on *.* to 'root'@'%' identified by '$password';
-
 flush privileges;
-
-exit;
+exit
 
 service mysql restart
 ```
