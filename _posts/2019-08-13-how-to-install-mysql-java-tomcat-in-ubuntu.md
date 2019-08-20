@@ -5,7 +5,7 @@ create: 2019-08-13
 update: 2019-08-20
 categories: blog
 tags: [Ubuntu]
-description: "How to Install MySQL in Ubuntu"
+description: "How to Install MySQL, Java, Tomcat in Ubuntu 18.04"
 ---
 
 
@@ -82,16 +82,18 @@ grant all privileges on *.* to 'root'@'%' identified by '$password';
 flush privileges;
 exit
 
-service mysql restart
 
+重启mysql服务
+sudo service mysql restart
 
+如果仍然无法连接
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 找到
 bind-address = 127.0.0.1
 改为 
 bind-address = 0.0.0.0
 
-最后执行
+最后重启服务
 sudo service mysql restart
 ```
 `问题`
@@ -104,7 +106,7 @@ sudo service mysql restart
     sudo service mysql restart
 3. 如果仍然无法远程连接
     sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-    找到 bind-address = 127.0.0.1, 改为 bind-address = 0.0.0.0
+    找到 bind-address = 127.0.0.1 改为 bind-address = 0.0.0.0
     sudo service mysql restart
 ```
 
