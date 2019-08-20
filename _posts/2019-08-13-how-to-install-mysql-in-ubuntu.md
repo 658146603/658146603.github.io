@@ -65,23 +65,36 @@ sudo systemctl enable rc-local
 
 
 `mysql允许远程连接:`
-
+```
 mysql -uroot -p
 
 use mysql;
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '$password'
+grant all privileges on *.* to 'root'@'%' identified by '$password';
 
 flush privileges;
 
 exit;
 
 service mysql restart
-
+```
+`问题`
+```
+1. mysql 只允许root登录 
+    alter user 'root'@'localhost' identified with mysql_native_password by '$password'
+2. Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' 
+    sudo mkdir -p /var/run/mysqld
+    sudo chown mysql /var/run/mysqld/
+    sudo service mysql restart
+3. ...
+```
 
 
 `Git`
-## 删除包括历史
+
+```
+删除文件历史记录
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch 文件相对路径' --prune-empty --tag-name-filter cat -- --all
-## 同步到远程
+同步到远程
 git push origin master --force
+```
