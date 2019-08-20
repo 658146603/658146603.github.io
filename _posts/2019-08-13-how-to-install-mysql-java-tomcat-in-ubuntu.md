@@ -83,6 +83,16 @@ flush privileges;
 exit
 
 service mysql restart
+
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+找到
+bind-address = 127.0.0.1
+改为 
+bind-address = 0.0.0.0
+
+最后执行
+sudo service mysql restart
 ```
 `问题`
 ```
@@ -92,7 +102,10 @@ service mysql restart
     sudo mkdir -p /var/run/mysqld
     sudo chown mysql /var/run/mysqld/
     sudo service mysql restart
-3. ...
+3. 如果仍然无法远程连接
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    找到 bind-address = 127.0.0.1, 改为 bind-address = 0.0.0.0
+    sudo service mysql restart
 ```
 
 
