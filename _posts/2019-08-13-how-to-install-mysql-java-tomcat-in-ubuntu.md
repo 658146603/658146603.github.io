@@ -108,6 +108,9 @@ sudo service mysql restart
     sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
     找到 bind-address = 127.0.0.1 改为 bind-address = 0.0.0.0
     sudo service mysql restart
+4. mysql 时区不正确
+    set global time_zone = '+8:00';
+    flush privileges;
 ```
 
 

@@ -38,7 +38,7 @@ tar -zxvf apache-tomcat-9.0.12.tar.gz
 
 `rc.local for Ubuntu-18.04`
 
-```
+```shell
 sudo nano /etc/systemd/system/rc-local.service
 
 内容：
@@ -82,4 +82,25 @@ exit 0
 
 sudo chmod 755 /etc/rc.local
 sudo systemctl enable rc-local
+```
+
+`Windows Terminal 添加Ubuntu-18.04选项卡`
+```json
+{
+    "acrylicOpacity" : 0.5,
+    "closeOnExit" : true,
+    "colorScheme" : "Campbell",
+    "commandline" : "wsl.exe -d Ubuntu-18.04",
+    "cursorColor" : "#FFFFFF",
+    "cursorShape" : "bar",
+    "fontFace" : "Consolas",
+    "fontSize" : 10,
+    "guid" : "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+    "historySize" : 9001,
+    "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+    "name" : "Ubuntu-18.04",
+    "padding" : "0, 0, 0, 0",
+    "snapOnInput" : true,
+    "useAcrylic" : false
+}
 ```
