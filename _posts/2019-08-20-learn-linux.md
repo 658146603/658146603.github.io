@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Learn Linux (Ubuntu 18.04 as Example)"
-create: 2019-08-13
+create: 2019-08-20
 update: 2019-08-20
 categories: blog
 tags: [Ubuntu]
