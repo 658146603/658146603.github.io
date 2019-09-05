@@ -5,7 +5,7 @@ create: 2019-09-05
 update: 2019-09-05
 categories: blog
 tags: [Dev]
-description: "Note for CTF"
+description: "CTF /WEB"
 ---
 
 MD5 为 0exxxx开头的字符串 {
