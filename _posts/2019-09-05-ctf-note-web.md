@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Note for Development"
+title: "CTF /WEB"
 create: 2019-09-05
 update: 2019-09-05
 categories: blog
