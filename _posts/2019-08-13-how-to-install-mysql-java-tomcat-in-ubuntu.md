@@ -109,8 +109,12 @@ sudo service mysql restart
     找到 bind-address = 127.0.0.1 改为 bind-address = 0.0.0.0
     sudo service mysql restart
 4. mysql 时区不正确
+    1.
     set global time_zone = '+8:00';
     flush privileges;
+
+    2.
+    set persist time_zone='+0:00';
 ```
 
 
