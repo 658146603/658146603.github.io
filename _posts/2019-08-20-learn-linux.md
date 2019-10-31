@@ -85,7 +85,7 @@ sudo systemctl enable rc-local
 ```
 
 `Windows Terminal 添加Ubuntu-18.04选项卡`
-```json
+```
 {
     "acrylicOpacity" : 0.5,
     "closeOnExit" : true,
