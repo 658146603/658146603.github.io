@@ -129,3 +129,53 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 ```shell
 sudo apt-get update
 ```
+
+## frp
+```
+wget https://github.com/fatedier/frp/releases/download/v0.29.1/frp_0.29.1_linux_amd64.tar.gz
+
+# frps.ini
+[common]
+bind_addr = 0.0.0.0
+bind_port = 7000
+vhost_http_port = 8000
+vhost_https_port = 8001
+dashboard_port = 7500
+privilege_token = 123456
+dashboard_user = ubuntu
+dashboard_pwd = 123
+log_file = ./frps.log
+log_level = info
+log_max_days = 3
+max_pool_count = 5
+authentication_timeout = 900
+tcp_mux = true
+
+# frpc.ini
+[common]
+server_addr = 服务器IP地址
+server_port = 7000
+privilege_token = 123456
+
+log_file = ./frpc.log
+log_level = info
+log_max_days = 3
+pool_count = 5
+tcp_mux = true
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 2200
+
+[web]
+type = http
+local_port = 80
+custom_domains = 服务器IP地址或服务器的域名（仔细填写，这是连接的主要方式）
+
+# start
+sudo ./frps -c frps.ini
+sudo ./frpc -c frpc.ini
+
+```
