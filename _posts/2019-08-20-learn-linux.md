@@ -179,3 +179,13 @@ sudo ./frps -c frps.ini
 sudo ./frpc -c frpc.ini
 
 ```
+
+## nginx显示文件目录
+```conf
+http{
+    # add lines below
+    autoindex on;
+    autoindex_exact_size off;
+    autoindex_localtime on;
+}
+```
