@@ -14,13 +14,13 @@ description: "Windows搭建本地Java Web开发环境(IDEA)以及部署"
 
 - idea 2019.3.4
 - Jdk 7及以上版本
-- Tomcat 7及以上版本(推荐tar.gz的压缩包)
+- Tomcat 7及以上版本
 
 ### `Tomcat`
 
 [官网下载Tomcat](https://tomcat.apache.org/)
 ![img](/img/2020-03-24-tomcat-download.png)
-解压到一个目录(最好不含空格或中文的路径)
+解压或安装到一个目录(最好不含空格或中文的路径)
 ![img](/img/2020-03-24-tomcat-directory.png)
 我们可以用bin/catalina.bat 或 bin/catalina.sh来开关Tomcat
 
