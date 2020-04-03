@@ -8,18 +8,17 @@ tags: [Raspberry Pi]
 description: "树莓派屏幕配置"
 ---
 
-
 触摸屏使用方式：
 
- 1.烧录自己想要的系统
+ 1. 烧录自己想要的系统
 
- 2.保证网络连接正常
+ 2. 保证网络连接正常
 
- 3.将LCD屏与树莓派开发板正确连接
+ 3. 将LCD屏与树莓派开发板正确连接
 
- 4.将网盘驱动拷贝到树莓派上（使用ssh或者使用U盘介质挂载）
+ 4. 将网盘驱动拷贝到树莓派上（使用ssh或者使用U盘介质挂载）
 
- 5.解压文件并开始安装。
+ 5. 解压文件并开始安装。
 
     修改权限        sudo chmod 777 LCD_show_35hdmi.tar.gz
 
@@ -66,7 +65,6 @@ description: "树莓派屏幕配置"
     25 ----> GND
     26 ----> NC
     Others are NC
-
 
 hdmi_mode 设置屏幕分辨率
 
@@ -133,6 +131,7 @@ hdmi_mode 设置屏幕分辨率
     H表示16:9比例(正常是4:3).
     2x表示双倍像素(即更高的像素时脉, 每个像素重复两次)
     4x表示四倍像素(即更高的像素时脉, 每个像素重复四次)
+
  
 
     当hdmi_group=2 (DMT)时,下列值有效警告: 像素时脉是有限制的, 最高支持的模式是1920x1200 @60Hz with reduced blanking.
@@ -222,3 +221,4 @@ hdmi_mode 设置屏幕分辨率
     hdmi_mode=84   2048x1152       reduced blanking
     hdmi_mode=85   720p      60Hz
     hdmi_mode=86   1366x768        reduced blanking
+
