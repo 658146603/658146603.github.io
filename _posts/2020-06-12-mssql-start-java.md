@@ -1,21 +1,22 @@
 ---
 layout: post
-title: "MSSQL入门，C#篇"
+title: "MSSQL入门，Java篇"
 create: 2020-06-12
-update: 2020-03-12
+update: 2020-06-12
 categories: blog
-tags: [C#]
-description: "用.Net Core的方式打开数据库课程设计"
+tags: [Java]
+description: "用Java的方式打开数据库课程设计"
 ---
 
-## 用.Net Core的方式打开数据库课程设计
+## 用Java的方式打开数据库课程设计
 
 ### `准备工作`
 
 * JetBrains Intellij IDEA Ultimate
 * JDK 1.8或11
 
-### `Tomcat`
+
+### `JDK`
 
 [官网下载Tomcat](https://tomcat.apache.org/)
 

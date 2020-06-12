@@ -2,13 +2,13 @@
 layout: post
 title: "MSSQL入门，C#篇"
 create: 2020-06-12
-update: 2020-03-12
+update: 2020-06-12
 categories: blog
 tags: [C#]
 description: "用.Net Core的方式打开数据库课程设计"
 ---
 
-## 用.Net Core的方式打开数据库课程设计
+## 用`.Net Core`的方式打开数据库课程设计
 
 ### `准备工作`
 
@@ -75,3 +75,75 @@ public static SqlConnection GetConnection()
 ```
 
 ### `查询数据`
+查询id=2的记录
+```C#
+//查询t_01中id=2的记录
+using (SqlCommand command = connection.CreateCommand())
+{
+    //@id为占位符，用command.Parameters.AddWithValue("@id", 2)赋值
+    //即最后得到的SQL语句为'select * from t_01 where id=2'
+    command.CommandText = "select * from t_01 where id=@id";
+    command.Parameters.AddWithValue("@id", 2);
+    //获取SqlDataReader对象来读取数据
+    using (SqlDataReader reader = command.ExecuteReader())
+    {
+        //while循环内每次读一行，用reader["id"]读取改行id的值
+        while (reader.Read())
+        {
+            Console.WriteLine(reader["id"]);
+            Console.WriteLine(reader["name"]);
+            Console.WriteLine(reader["info"]);
+        }
+    }
+}
+```
+#### `查询结果`
+![img](../img/mssql/CSharp/query_0.png)
+
+### `更新数据`
+将id=2的记录的info字段修改为helloworld
+```C#
+using (SqlCommand command = connection.CreateCommand())
+{
+	//将id为2的记录的info字段改为helloworld，
+	command.CommandText = "update t_01 set info=@info where id=@id";
+	command.Parameters.AddWithValue("@info", "helloworld");
+	command.Parameters.AddWithValue("@id", 2);
+	//affectedRows保存受影响的行数
+	int affectedRows = command.ExecuteNonQuery();
+	Console.WriteLine(affectedRows);
+}
+```
+#### `更新结果`
+![img](../img/mssql/CSharp/update_0.png)
+
+### `插入数据`
+```C#
+using (SqlCommand command = connection.CreateCommand())
+{
+	command.CommandType = CommandType.Text;
+	command.CommandText = "insert into t_01 (name, info) values (@name, @info)";
+	command.Parameters.AddWithValue("@name", "stu05");
+	command.Parameters.AddWithValue("@info", "135790");
+	int affectedRows = command.ExecuteNonQuery();
+	Console.WriteLine(affectedRows);
+}
+```
+#### `插入结果`
+![img](../img/mssql/CSharp/insert_0.png)
+
+### `删除数据`
+删除id=8的记录
+```C#
+using (SqlCommand command = connection.CreateCommand())
+{
+	command.CommandType = CommandType.Text;
+	command.CommandText = "delete from t_01 where id=@id";
+	command.Parameters.AddWithValue("@id", 8);
+	int affectedRows = command.ExecuteNonQuery();
+	Console.WriteLine(affectedRows);
+}
+
+```
+#### `删除结果`
+![img](../img/mssql/CSharp/delete_0.png)
