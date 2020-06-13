@@ -15,110 +15,99 @@ description: "用Java的方式打开数据库课程设计"
 * JetBrains Intellij IDEA Ultimate
 * JDK 1.8或11
 
-
-### `JDK`
-
-[官网下载Tomcat](https://tomcat.apache.org/)
-
-![img](/img/2020-03-24-tomcat-download.png)
-
-解压或安装到一个目录(最好不含空格或中文的路径)
-
-![img](/img/2020-03-24-tomcat-directory.png)
-
-我们可以用bin/catalina.bat 或 bin/catalina.sh来开关Tomcat
-
-``` bat
-# 开启
-PS C:\dev\apache-tomcat-9.0.12\bin> .\catalina.bat start
-Using CATALINA_BASE:   "C:\dev\apache-tomcat-9.0.12"
-Using CATALINA_HOME:   "C:\dev\apache-tomcat-9.0.12"
-Using CATALINA_TMPDIR: "C:\dev\apache-tomcat-9.0.12\temp"
-Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_131"
-Using CLASSPATH:       "C:\dev\apache-tomcat-9.0.12\bin\bootstrap.jar;C:\dev\apache-tomcat-9.0.12\bin\tomcat-juli.jar"
-
-# 关闭
-PS C:\dev\apache-tomcat-9.0.12\bin> .\catalina.bat stop
-Using CATALINA_BASE:   "C:\dev\apache-tomcat-9.0.12"
-Using CATALINA_HOME:   "C:\dev\apache-tomcat-9.0.12"
-Using CATALINA_TMPDIR: "C:\dev\apache-tomcat-9.0.12\temp"
-Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_131"
-Using CLASSPATH:       "C:\dev\apache-tomcat-9.0.12\bin\bootstrap.jar;C:\dev\apache-tomcat-9.0.12\bin\tomcat-juli.jar"
-```
-
-我们可以看见Tomcat下有webapps目录，我们写的应用可以部署在这里
-
-### `使用IDEA提高开发效率`
+### `新建项目`
 
 打开IDEA我们可以看见下面的起始页面
-点击 `Create New Page` 新建项目
+点击 `Create New Page` 新建项目，进入 `Java` 点击下一步，勾选`Create project from template`，点击下一步设置项目名称、路径、包名等即可创建完成
+![img](../img/mssql/Java/create_project_0.png)
+![img](../img/mssql/Java/create_project_1.png)
+![img](../img/mssql/Java/create_project_2.png)
+![img](../img/mssql/Java/create_project_3.png)
 
-![img](/img/2020-03-24-idea-start-page.png)
+### `添加依赖`
 
-进入 `Java Enterprice` 选择 `Web Application` 
+前往[mvnrepository.com](https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc)下载适用于mssql的jdbc驱动用以连接数据库，将连接驱动放入lib文件夹下，右键项目选择`Project Structure`，进入Libraries，点击+按钮，添加Java Lib，选择lib文件夹点击确定即可
+![img](../img/mssql/Java/dependency_0.png)
+![img](../img/mssql/Java/dependency_1.png)
+![img](../img/mssql/Java/dependency_2.png)
+![img](../img/mssql/Java/dependency_3.png)
 
-![img](/img/2020-03-24-idea-new-project.png)
+### `初始数据`
 
-输入项目名称和路径
+![img](../img/mssql/Java/init_0.png)
 
-![img](/img/2020-03-24-idea-new-project-1.png)
+### `插入数据`
 
-新建项目完毕
+```java
+//插入数据
+//PreparedStatement预编译SQL语句确保安全
+//?是占位符，用setString/setInt等方法插入对应占位符的值
+try (PreparedStatement ps = conn.prepareStatement("insert into t_01 (name, info) values (?, ?)")) {
+    ps.setString(1, "stu10");
+    ps.setString(2, "135790");
+    ps.execute();
+} catch (SQLException e) {
+    e.printStackTrace();
+}
+```
 
-![img](/img/2020-03-24-idea-new-project-2.png)
+#### `插入结果`
 
-到这一步我们就完成了项目的创建，接下来是部署和运行项目的环节
-点击右上角的 `Add Configuration` 新增配置
+![img](../img/mssql/Java/insert_0.png)
 
-![img](/img/2020-03-24-idea-add-conf.png)
+### `更新数据`
 
-点击左上角的+号并选择(Tomcat Server, Local)来新建一个本地的部署配置
+```java
+//更新数据，将id=10的记录的info字段改为hello world
+try (PreparedStatement ps = conn.prepareStatement("update t_01 set info=? where id=?")) {
+    ps.setString(1, "hello world");
+    ps.setInt(2, 10);
+    ps.execute();
+} catch (SQLException e) {
+    e.printStackTrace();
+}
+```
 
-![img](/img/2020-03-24-idea-add-conf-1.png)
+#### `更新结果`
 
-因为是第一次配置，我们需要配置Tomcat目录，点击Application Server的Configure新增一个Tomcat目录
+![img](../img/mssql/Java/update_0.png)
 
-![img](/img/2020-03-24-idea-add-conf-2.png)
+### `删除数据`
 
-![img](/img/2020-03-24-idea-add-conf-3.png)
+```java
+//删除数据，删除id=10的记录
+try (PreparedStatement ps = conn.prepareStatement("delete from t_01 where id=?")) {
+    ps.setInt(1, 10);
+    ps.execute();
+} catch (SQLException e) {
+    e.printStackTrace();
+}
+```
 
-这里的URL是我们点击运行项目后IDEA自动打开浏览器URL，HTTP Port则是IDEA里的Tomcat需要监听的端口
+#### `删除结果`
 
-![img](/img/2020-03-24-idea-add-conf-4.png)
+![img](../img/mssql/Java/delete_0.png)
 
-![img](/img/2020-03-24-idea-add-conf-5.png)
+### `查询数据`
 
-点击右上角的绿色三角形可以运行应用，当看到下面的截图并跳出浏览器时，项目就运行成功了
+```java
+//查询所有数据并输出
+try (PreparedStatement ps = conn.prepareStatement("select * from t_01")) {
+    try (ResultSet rs = ps.executeQuery()) {
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String info = rs.getString("info");
+            System.out.println("id=" + id + ", name=" + name + ", info=" + info);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+} catch (SQLException e) {
+    e.printStackTrace();
+}
+```
 
-![img](/img/2020-03-24-idea-start.png)
+#### `查询结果`
 
-当代码有更改时，如果要更新正在运行的项目，你仍然可以点击那个按钮，只不过现在它是一个半圆形的刷新箭头，当跳出Update 'example'框时，可以选择Redeploy来最快的应用更改
-
-![img](/img/2020-03-24-idea-start-1.png)
-
-接下来是配置要部署的内容了，进入 `Deployment` 点击右侧的+号，点击 `Artifact...` 就可以生成一个默认的未压缩的可用于部署的应用，Application Context是应用的路径，这里我们设置位example，所以到时候可以通过 <http://localhost:8080/example/> 访问应用
-
-![img](/img/2020-03-24-idea-add-conf-6.png)
-
-![img](/img/2020-03-24-idea-add-conf-7.png)
-
-接下来是打包应用的步骤
-项目右键点击 `Open Module Settings` 
-
-![img](/img/2020-03-24-idea-pack.png)
-
-我们看到这里已经有了之前创建的exploded_war，现在我们要新建以这个exploded_war打包的配置，点击+号
-
-![img](/img/2020-03-24-idea-pack-1.png)
-
-选择 `Web Application: Archive` , `For 'example:war exploded'` 就可以了，我们可以把Name改成example，这样生成的war文件的文件名就是example.war了
-
-![img](/img/2020-03-24-idea-pack-2.png)
-
-要编译新的应用是，只需要点击 `Build` , `Buile Artifacts...` , 点击Build或Rebuild就行了，example.war会出现在out文件夹中，把example.war文件放入Tomcat的webapps文件夹下，Tomcat默认会自动解压和部署，并且当文件夹下的example.war更新时，应用也会相应的更新
-
-![img](/img/2020-03-24-idea-pack-3.png)
-
-![img](/img/2020-03-24-idea-pack-4.png)
-
-![img](/img/2020-03-24-idea-pack-5.png)
+![img](../img/mssql/Java/query_0.png)
